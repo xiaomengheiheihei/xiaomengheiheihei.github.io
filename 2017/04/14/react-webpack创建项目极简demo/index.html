@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>利用WebViewJavascriptBridge实现JS和native之间的交互 | 一只安静的代码撸er~</title>
+  <title>react+webpack创建项目极简demo | 一只安静的代码撸er~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实作为一个开源项目，没什么特别之处，只是一个类似三方类库的调用，但是因为没接触过，还是有很多坑的。OC那边不懂，直接复制JS代码。">
-<meta name="keywords" content="WebViewJavascriptBridge native 通信">
+  <meta name="description" content="0、准备工作 既然要用轮子当然就要先安装了，不多逼逼。  1 安装wenpack  $ npm install webpack -g 　　　// 当然前提你要安装node  2 安装webpack-server（webpack的服务器，不用请忽略）  $ npm install webpack-dev-g  3 安装react react-dom到项目  $ npm install react r">
+<meta name="keywords" content="react webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用WebViewJavascriptBridge实现JS和native之间的交互">
-<meta property="og:url" content="http://yoursite.com/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/index.html">
+<meta property="og:title" content="react+webpack创建项目极简demo">
+<meta property="og:url" content="http://yoursite.com/2017/04/14/react-webpack创建项目极简demo/index.html">
 <meta property="og:site_name" content="一只安静的代码撸er~">
-<meta property="og:description" content="其实作为一个开源项目，没什么特别之处，只是一个类似三方类库的调用，但是因为没接触过，还是有很多坑的。OC那边不懂，直接复制JS代码。">
-<meta property="og:updated_time" content="2017-04-14T04:01:32.658Z">
+<meta property="og:description" content="0、准备工作 既然要用轮子当然就要先安装了，不多逼逼。  1 安装wenpack  $ npm install webpack -g 　　　// 当然前提你要安装node  2 安装webpack-server（webpack的服务器，不用请忽略）  $ npm install webpack-dev-g  3 安装react react-dom到项目  $ npm install react r">
+<meta property="og:updated_time" content="2017-04-14T06:44:12.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用WebViewJavascriptBridge实现JS和native之间的交互">
-<meta name="twitter:description" content="其实作为一个开源项目，没什么特别之处，只是一个类似三方类库的调用，但是因为没接触过，还是有很多坑的。OC那边不懂，直接复制JS代码。">
+<meta name="twitter:title" content="react+webpack创建项目极简demo">
+<meta name="twitter:description" content="0、准备工作 既然要用轮子当然就要先安装了，不多逼逼。  1 安装wenpack  $ npm install webpack -g 　　　// 当然前提你要安装node  2 安装webpack-server（webpack的服务器，不用请忽略）  $ npm install webpack-dev-g  3 安装react react-dom到项目  $ npm install react r">
   
     <link rel="alternative" href="/atom.xml" title="一只安静的代码撸er~" type="application/atom+xml">
   
@@ -221,11 +221,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-利用WebViewJavascriptBridge实现JS和native之间的交互" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-react-webpack创建项目极简demo" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/" class="article-date">
-      <time datetime="2017-04-14T03:44:11.000Z" itemprop="datePublished">2017-04-14</time>
+      <a href="/2017/04/14/react-webpack创建项目极简demo/" class="article-date">
+      <time datetime="2017-04-14T06:43:11.000Z" itemprop="datePublished">2017-04-14</time>
 </a>
     </div>
   
@@ -238,7 +238,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      利用WebViewJavascriptBridge实现JS和native之间的交互
+      react+webpack创建项目极简demo
     </h1>
   
 
@@ -246,14 +246,10 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/交互/">交互</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebViewJavascriptBridge-native-通信/">WebViewJavascriptBridge native 通信</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-webpack/">react webpack</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -263,8 +259,38 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>其实作为一个开源项目，没什么特别之处，只是一个类似三方类库的调用，但是因为没接触过，还是有很多坑的。OC那边不懂，直接复制JS代码。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">12     window.onerror = function(err) &#123;</div><div class="line">13         log(&apos;window.onerror: &apos; + err)</div><div class="line">14     &#125;</div><div class="line">15 </div><div class="line">16     //用于创建桥接对象的函数</div><div class="line">17     function connectWebViewJavascriptBridge(callback) &#123;</div><div class="line">18         //如果桥接对象已存在，则直接调用callback函数</div><div class="line">19         if (window.WebViewJavascriptBridge) &#123;</div><div class="line">20             callback(WebViewJavascriptBridge)</div><div class="line">21         &#125;</div><div class="line">22         //否则添加一个监听器来执行callback函数</div><div class="line">23         else &#123;</div><div class="line">24             document.addEventListener(&apos;WebViewJavascriptBridgeReady&apos;, function() &#123;</div><div class="line">25                 callback(WebViewJavascriptBridge)</div><div class="line">26             &#125;, false)</div><div class="line">27         &#125;</div><div class="line">28     &#125;</div><div class="line">29 </div><div class="line">30     //页面加载后，立刻调用创建桥接对象的函数</div><div class="line">31     connectWebViewJavascriptBridge(function(bridge) &#123;</div><div class="line">32         //用户自定义的函数都要写在这里</div><div class="line">33         //这里由用户自定义了一个函数，用来写日志到UI，也就是一个普通的js函数</div><div class="line">34         var uniqueId = 1</div><div class="line">35         function log(message, data) &#123;</div><div class="line">36             var log = document.getElementById(&apos;log&apos;)</div><div class="line">37             var el = document.createElement(&apos;div&apos;)</div><div class="line">38             el.className = &apos;logLine&apos;</div><div class="line">39             el.innerHTML = uniqueId++ + &apos;. &apos; + message + &apos;:&lt;br/&gt;&apos; + JSON.stringify(data)</div><div class="line">40             if (log.children.length) &#123; log.insertBefore(el, log.children[0]) &#125;</div><div class="line">41             else &#123; log.appendChild(el) &#125;</div><div class="line">42         &#125;</div><div class="line">43 </div><div class="line">44         //这个方法用于js接收oc发来的send，并使用responseCallback方法给OC回发消息</div><div class="line">45         bridge.init(function(message, responseCallback) &#123;</div><div class="line">46             log(&apos;JS got a message&apos;, message)</div><div class="line">47             var data = &#123; &apos;Javascript Responds&apos;:&apos;Wee!&apos; &#125;</div><div class="line">48             log(&apos;JS responding with&apos;, data)</div><div class="line">49             responseCallback(data)</div><div class="line">50         &#125;)</div><div class="line">51 </div><div class="line">52         //这个方法用于js接收oc的callHandler，handler用一个key标记，可以注册多个handler</div><div class="line">53         bridge.registerHandler(&apos;testJavascriptHandler&apos;, function(data, responseCallback) &#123;</div><div class="line">54             log(&apos;ObjC called testJavascriptHandler with&apos;, data)</div><div class="line">55             var responseData = &#123; &apos;Javascript Says&apos;:&apos;Right back atcha!&apos; &#125;</div><div class="line">56             log(&apos;JS responding with&apos;, responseData)</div><div class="line">57             responseCallback(responseData)</div><div class="line">58         &#125;)</div><div class="line">59 </div><div class="line">60         //添加js给oc发消息的按钮</div><div class="line">61         var button = document.getElementById(&apos;buttons&apos;).appendChild(document.createElement(&apos;button&apos;))</div><div class="line">62         button.innerHTML = &apos;Send message to ObjC&apos;</div><div class="line">63         button.onclick = function(e) &#123;</div><div class="line">64             e.preventDefault()</div><div class="line">65             var data = &apos;Hello from JS button&apos;</div><div class="line">66             log(&apos;JS sending message&apos;, data)</div><div class="line">67             //调用桥接对象的send方法给oc发消息，第二个参数（函数）是oc对js的返回</div><div class="line">68             bridge.send(data, function(responseData) &#123;</div><div class="line">69                 log(&apos;JS got response&apos;, responseData)</div><div class="line">70             &#125;)</div><div class="line">71         &#125;</div><div class="line">72 </div><div class="line">73         document.body.appendChild(document.createElement(&apos;br&apos;))</div><div class="line">74 </div><div class="line">75         //添加js调用oc方法的测试按钮</div><div class="line">76         var callbackButton = document.getElementById(&apos;buttons&apos;).appendChild(document.createElement(&apos;button&apos;))</div><div class="line">77         callbackButton.innerHTML = &apos;Fire testObjcCallback&apos;</div><div class="line">78         callbackButton.onclick = function(e) &#123;</div><div class="line">79             e.preventDefault()</div><div class="line">80             log(&apos;JS calling handler &quot;testObjcCallback&quot;&apos;)</div><div class="line">81             //调用桥接对象的callHandler方法给oc发消息，三个参数分别是关联的key，传值信息，以及oc对js的回调</div><div class="line">82             bridge.callHandler(&apos;testObjcCallback&apos;, &#123;&apos;foo&apos;: &apos;bar&apos;&#125;, function(response) &#123;</div><div class="line">83                 log(&apos;JS got response&apos;, response)</div><div class="line">84             &#125;)</div><div class="line">85         &#125;</div><div class="line">86     &#125;)</div><div class="line">87 &lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>这部分代码就完全搞明白了，或是搞不明白照抄就可以，但是难处理的并不是这个，而是同时可以和iOS和Android实现通信，这就存在一个判断平台的问题，这个判断条件也不难想到，通过navigator.userAgent可以实现</p>
+        <h1 id="0、准备工作"><a href="#0、准备工作" class="headerlink" title="0、准备工作"></a>0、准备工作</h1><blockquote>
+<p>既然要用轮子当然就要先安装了，不多逼逼。</p>
+</blockquote>
+<p>1 安装wenpack</p>
+<blockquote>
+<p>$ npm install webpack -g 　　　// 当然前提你要安装node</p>
+</blockquote>
+<p>2 安装webpack-server（webpack的服务器，不用请忽略）</p>
+<blockquote>
+<p>$ npm install webpack-dev-g</p>
+</blockquote>
+<p>3 安装react react-dom到项目</p>
+<blockquote>
+<p>$ npm install react react-dom –save</p>
+</blockquote>
+<p>4 安装 Babel 的 loader 以支持 ES6 语法:</p>
+<blockquote>
+<p>$ npm install babel-core babel-loader babel-preset-es2015 babel-preset-react –save-dev</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="1、-配置webpack-config-js文件"><a href="#1、-配置webpack-config-js文件" class="headerlink" title="1、 配置webpack.config.js文件"></a>1、 配置webpack.config.js文件</h1><blockquote>
+<p>和其他自动化工具一样，webpack使用config文件来配置路径等问题，我们假设我们的工程有一个入口文件 main.js, 该文件位于 js/ 目录下, 并且希望 webpack 将它打包输出为 build/ 目录下的 build.js 文件。并且在module下配置loaders（装载机，模块加载器） webpack.config.js 配置如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;);</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line">  // 输入文件路径</div><div class="line">  entry : path.resolve(__dirname, &apos;js/main.js&apos;),</div><div class="line">  // 输出文件路径</div><div class="line">  output : &#123;</div><div class="line">    path : path.resolve(__dirname, &apos;build&apos;),</div><div class="line">    filename : &apos;build.js&apos;</div><div class="line">  &#125;,</div><div class="line">module : &#123;</div><div class="line">		loaders : [</div><div class="line">			&#123;</div><div class="line">				test : /\.jsx?$/,   // 匹配jsx语法规则</div><div class="line">				exclude : /node_modules/,   // 排除的模块</div><div class="line">				loaders : &apos;babel-loader&apos;,   // loader名</div><div class="line">				query : &#123;</div><div class="line">				    // 将react预置为es5</div><div class="line">					presets : [&apos;es2015&apos;, &apos;react&apos;]</div><div class="line">				&#125;</div><div class="line">			&#125;,</div><div class="line">		]</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="2、配置-package-json"><a href="#2、配置-package-json" class="headerlink" title="2、配置 package.json"></a>2、配置 package.json</h1><blockquote>
+<p>在项目根目录下运行 npm init -y 会按照默认设置生成 package.json, 修改 scripts 的键值如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">    &quot;start&quot;: &quot;webpack-dev-server&quot;,</div><div class="line">    &quot;build&quot;: &quot;webpack&quot;</div><div class="line"> &#125;,</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>现在执行 npm run build 相当于 webpack, npm run start 相当于 webpack-dev-server，就可以直接启动你的项目啦，so easy！！！（当然现在是什么都没有的，html都没得嘛）</p>
+<h1 id="3、创建文件并写入"><a href="#3、创建文件并写入" class="headerlink" title="3、创建文件并写入"></a>3、创建文件并写入</h1><p>在项目根目录创建html文件夹用来存放html文件，创建index.html文件，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;!-- 容器 --&gt;</div><div class="line">    &lt;div id=&quot;content&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;!-- 引入编译好的js文件 --&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;../build/build.js&quot;&gt;&lt;/script&gt;</div><div class="line">    </div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<p>编写main.js文件，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// main.js 入口文件</div><div class="line">// 引入依赖文件</div><div class="line">import $ from &apos;jquery&apos;;</div><div class="line">import React from &apos;react&apos;;</div><div class="line">import &#123; render &#125; from &apos;react-dom&apos;;</div><div class="line"></div><div class="line">// 创建组件</div><div class="line">class HelloWorld extends React.Component &#123;</div><div class="line">	render() &#123;</div><div class="line">		return (</div><div class="line">			&lt;div&gt;Hello World&lt;/div&gt;</div><div class="line">			);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">render (&lt;HelloWorld /&gt;, $(&apos;#content&apos;)[0]);</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>至此就可以npm run build 然后 npm run start开始你的项目啦！Good Luck…</p>
+</blockquote>
 
       
       
@@ -319,13 +345,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/">利用WebViewJavascriptBridge实现JS和native之间的交互</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/14/react-webpack创建项目极简demo/">react+webpack创建项目极简demo</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Carlos 的个人博客">Carlos</a></p>
-        <p><span>发布时间:</span>2017年04月14日 - 11时44分</p>
-        <p><span>最后更新:</span>2017年04月14日 - 12时01分</p>
+        <p><span>发布时间:</span>2017年04月14日 - 14时43分</p>
+        <p><span>最后更新:</span>2017年04月14日 - 14时44分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/" title="利用WebViewJavascriptBridge实现JS和native之间的交互">http://yoursite.com/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/　　作者: Carlos" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/14/react-webpack创建项目极简demo/" title="react+webpack创建项目极简demo">http://yoursite.com/2017/04/14/react-webpack创建项目极简demo/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/14/react-webpack创建项目极简demo/　　作者: Carlos" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -338,11 +364,15 @@
 
 <nav id="article-nav">
   
-  
-    <a href="/2017/04/14/react-webpack创建项目极简demo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">react+webpack创建项目极简demo</div>
-      <strong class="article-nav-caption">></strong>
+    <a href="/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          利用WebViewJavascriptBridge实现JS和native之间的交互
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -351,7 +381,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0、准备工作"><span class="toc-number">1.</span> <span class="toc-text">0、准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1、-配置webpack-config-js文件"><span class="toc-number">2.</span> <span class="toc-text">1、 配置webpack.config.js文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、配置-package-json"><span class="toc-number">3.</span> <span class="toc-text">2、配置 package.json</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3、创建文件并写入"><span class="toc-number">4.</span> <span class="toc-text">3、创建文件并写入</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -402,13 +432,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/" title="上一篇: 利用WebViewJavascriptBridge实现JS和native之间的交互">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/14/react-webpack创建项目极简demo/" title="下一篇: react+webpack创建项目极简demo">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/react-webpack创建项目极简demo/">react+webpack创建项目极简demo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/">利用WebViewJavascriptBridge实现JS和native之间的交互</a></li></ul>
