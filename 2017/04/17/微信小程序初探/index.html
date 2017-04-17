@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>跨域的常用四种方式 | 一只安静的代码撸er~</title>
+  <title>微信小程序初探 | 一只安静的代码撸er~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、通过jsonp跨域 原理 由于同源策略的限制，我们不能直接利用ajax来获取不同页面的数据，但是我们可以通过script标签直接引用来自不同域的JS文件，这也正好说明script标签不受同源策略的影响。jsonp正是利用这个原理。   实现 jsonp实现跨域大致可分为以下四步：     动态的创建script标签 拼接callback函数 拼接普通参数和设置script的src属性后拼接到b">
-<meta name="keywords" content="跨域 数据获取">
+  <meta name="description" content="一、程序结构官方给出的实例程序为例：包括入口文件app.js、app.json、app.wxss、和pages文件夹以及utils文件夹  app.js定义微信小程序，为小程序的入口文件，定义一些全局方法 app.json路由+页面设置，主要控制bar以及背景颜色等。 app.wxss样式文件，全局样式 pages文件夹下为各个页面文件，包括js、wxss、wxml和一个json文件，json文件">
+<meta name="keywords" content="小程序 笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨域的常用四种方式">
-<meta property="og:url" content="http://yoursite.com/2017/04/14/跨域的常用四种方式/index.html">
+<meta property="og:title" content="微信小程序初探">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/微信小程序初探/index.html">
 <meta property="og:site_name" content="一只安静的代码撸er~">
-<meta property="og:description" content="一、通过jsonp跨域 原理 由于同源策略的限制，我们不能直接利用ajax来获取不同页面的数据，但是我们可以通过script标签直接引用来自不同域的JS文件，这也正好说明script标签不受同源策略的影响。jsonp正是利用这个原理。   实现 jsonp实现跨域大致可分为以下四步：     动态的创建script标签 拼接callback函数 拼接普通参数和设置script的src属性后拼接到b">
-<meta property="og:updated_time" content="2017-04-14T06:51:33.834Z">
+<meta property="og:description" content="一、程序结构官方给出的实例程序为例：包括入口文件app.js、app.json、app.wxss、和pages文件夹以及utils文件夹  app.js定义微信小程序，为小程序的入口文件，定义一些全局方法 app.json路由+页面设置，主要控制bar以及背景颜色等。 app.wxss样式文件，全局样式 pages文件夹下为各个页面文件，包括js、wxss、wxml和一个json文件，json文件">
+<meta property="og:updated_time" content="2017-04-17T08:32:19.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨域的常用四种方式">
-<meta name="twitter:description" content="一、通过jsonp跨域 原理 由于同源策略的限制，我们不能直接利用ajax来获取不同页面的数据，但是我们可以通过script标签直接引用来自不同域的JS文件，这也正好说明script标签不受同源策略的影响。jsonp正是利用这个原理。   实现 jsonp实现跨域大致可分为以下四步：     动态的创建script标签 拼接callback函数 拼接普通参数和设置script的src属性后拼接到b">
+<meta name="twitter:title" content="微信小程序初探">
+<meta name="twitter:description" content="一、程序结构官方给出的实例程序为例：包括入口文件app.js、app.json、app.wxss、和pages文件夹以及utils文件夹  app.js定义微信小程序，为小程序的入口文件，定义一些全局方法 app.json路由+页面设置，主要控制bar以及背景颜色等。 app.wxss样式文件，全局样式 pages文件夹下为各个页面文件，包括js、wxss、wxml和一个json文件，json文件">
   
     <link rel="alternative" href="/atom.xml" title="一只安静的代码撸er~" type="application/atom+xml">
   
@@ -221,11 +221,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-跨域的常用四种方式" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-微信小程序初探" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/14/跨域的常用四种方式/" class="article-date">
-      <time datetime="2017-04-14T06:46:03.000Z" itemprop="datePublished">2017-04-14</time>
+      <a href="/2017/04/17/微信小程序初探/" class="article-date">
+      <time datetime="2017-04-17T08:30:58.000Z" itemprop="datePublished">2017-04-17</time>
 </a>
     </div>
   
@@ -238,7 +238,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      跨域的常用四种方式
+      微信小程序初探
     </h1>
   
 
@@ -249,7 +249,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域-数据获取/">跨域 数据获取</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序-笔记/">小程序 笔记</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -259,40 +259,46 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="一、通过jsonp跨域"><a href="#一、通过jsonp跨域" class="headerlink" title="一、通过jsonp跨域"></a>一、通过jsonp跨域</h2><ul>
-<li>原理<blockquote>
-<p>由于同源策略的限制，我们不能直接利用ajax来获取不同页面的数据，但是我们可以通过script标签直接引用来自不同域的JS文件，这也正好说明script标签不受同源策略的影响。jsonp正是利用这个原理。</p>
+        <h2 id="一、程序结构"><a href="#一、程序结构" class="headerlink" title="一、程序结构"></a>一、程序结构</h2><p>官方给出的实例程序为例：<br>包括入口文件app.js、app.json、app.wxss、和pages文件夹以及utils文件夹</p>
+<blockquote>
+<p>app.js<br>定义微信小程序，为小程序的入口文件，定义一些全局方法</p>
+<p>app.json<br>路由+页面设置，主要控制bar以及背景颜色等。</p>
+<p>app.wxss<br>样式文件，全局样式</p>
+<p>pages文件夹下为各个页面文件，包括js、wxss、wxml和一个json文件，json文件为配置文件，相关配置同全局下的app.json，但是各页面下的json配置文件会重置全局配置。</p>
 </blockquote>
-</li>
-<li>实现<blockquote>
-<p>jsonp实现跨域大致可分为以下四步：</p>
+<h2 id="二、程序注册"><a href="#二、程序注册" class="headerlink" title="二、程序注册"></a>二、程序注册</h2><blockquote>
+<p>App()函数用来注册一个小程序。接受一个object参数，其指定小程序的生命周期函数等。可以监听小程序的初始化、首次显示、前后台转换、error等信息，同时接收自定义方法。<br>Page() 函数用来注册一个页面。接受一个object参数，其指定页面的初始数据、生命周期函数、事件处理函数等。同样可以定义方法，通过this获取实例。</p>
 </blockquote>
-</li>
-</ul>
+<h3 id="三、view"><a href="#三、view" class="headerlink" title="三、view"></a>三、view</h3><p>###1）小程序采用WXML文件，WXML(WeiXin Markup Language)是MINA框架设计的一套标签语言，结合基础组件、事件系统，可以构建出页面的结构。<br>其实就和vue等框架的绑定数据差不多，换汤不换药。基本看一下就能懂的东西，附上（<a href="http://www.w3cschool.cn/weixinapp/weixinapp-wxml.html）" target="_blank" rel="external">http://www.w3cschool.cn/weixinapp/weixinapp-wxml.html）</a></p>
+<p>###2)关于wx:for的wx:key的问题：<br>wx:for其实就是for循环来输出页面，和普通的页面渲染引擎并无区别，但是如果列表中项目的位置会动态改变或者有新的项目添加到列表中，并且希望列表中的项目保持自己的特征和状态（如 <input> 中的输入内容，<switch> 的选中状态），需要使用 wx:key 来指定列表中项目的唯一的标识符。<br>wx:key 的值以两种形式提供</switch></p>
 <ol>
-<li>动态的创建script标签</li>
-<li>拼接callback函数</li>
-<li>拼接普通参数和设置script的src属性后拼接到body后</li>
-<li>在数据加载完成后删除script标签</li>
+<li>字符串，代表在 for 循环的array中item的某个property，该property的值需要是列表中唯一的字符串或数字，且不能动态改变。</li>
+<li>保留关键字 *this 代表在 for 循环中的 item 本身，这种表示需要 item 本身是一个唯一的字符串或者数字，<br>如：<br>当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。<br><strong>如不提供 wx:key，会报一个 warning， 如果明确知道该列表是静态，或者不必关注其顺序，可以选择忽略。</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// .wxml</div><div class="line">&lt;switch wx:for=&quot;&#123;&#123;objectArray&#125;&#125;&quot; wx:key=&quot;unique&quot; style=&quot;display: block;&quot;&gt; &#123;&#123;item.id&#125;&#125; &lt;/switch&gt;</div><div class="line">&lt;button bindtap=&quot;switch&quot;&gt; Switch &lt;/button&gt;</div><div class="line">&lt;button bindtap=&quot;addToFront&quot;&gt; Add to the front &lt;/button&gt;</div><div class="line"></div><div class="line">&lt;switch wx:for=&quot;&#123;&#123;numberArray&#125;&#125;&quot; wx:key=&quot;*this&quot; style=&quot;display: block;&quot;&gt; &#123;&#123;item&#125;&#125; &lt;/switch&gt;</div><div class="line">&lt;button bindtap=&quot;addNumberToFront&quot;&gt; Add to the front &lt;/button&gt;</div></pre></td></tr></table></figure>
+</li>
 </ol>
-<ul>
-<li>注意：</li>
-</ul>
-<ul>
-<li>必须记住的是利用jsonp跨域的时候返回的jsonp数据是一个函数调用，在使用之前来定义callback这个函数，然后这个函数可以返回我们想要的数据。</li>
-</ul>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// 封装jsonp函数</div><div class="line">function jsonp (url, paramters, callback) &#123;</div><div class="line">	//1、创建script标签</div><div class="line">	var script = document.createElement(&apos;script&apos;);</div><div class="line">	</div><div class="line">	//2、拼接callback函数</div><div class="line">	var cbName = &quot;cbf&quot; + new Date().getTime();</div><div class="line">	window[cbName] = callback;</div><div class="line">	url += (&quot;?callback=&quot; + cbName);</div><div class="line">	</div><div class="line">	//3、拼接普通参数</div><div class="line">	if(paramters) &#123;</div><div class="line">		for (var key in paramters) &#123;</div><div class="line">			url += (&quot;&amp;&quot; + key + &quot;=&quot; + paramters[key]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	//4、设置src</div><div class="line">	script.src = url;</div><div class="line">	</div><div class="line">	//5、拼接到body中</div><div class="line">	document.body.appendChild(script);</div><div class="line">	</div><div class="line">	//6、加载完后移除</div><div class="line">	script.onload = function () &#123;</div><div class="line">		document.body.removeChild(this);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>利用jquery的$.getJSON(“<a href="http://www.mengfanshuang.com/data.php?callback=?" target="_blank" rel="external">http://www.mengfanshuang.com/data.php?callback=?</a>“, callbackFn)方法来实现跨域，jquery已经封装并处理好了回调函数的问题，简单易用。jquery会自动生成一个全局函数来替换callback=?中的问号，之后获取到数据后又会自动销毁，实际上就是起一个临时代理函数的作用。</li>
-</ul>
-<ul>
-<li>angularJS实现跨域</li>
-</ul>
-<h2 id="二、通过修改document-domain来跨子域"><a href="#二、通过修改document-domain来跨子域" class="headerlink" title="二、通过修改document.domain来跨子域"></a>二、通过修改document.domain来跨子域</h2><ul>
-<li>原理<br>浏览器都有一个同源策略，其限制之一就是第一种方法中我们说的不能通过ajax的方法去请求不同源中的文档。 它的第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。有一点需要说明，不同的框架之间（父子或同辈），是能够获取到彼此的window对象的，但蛋疼的是你却不能使用获取到的window对象的属性和方法(html5中的postMessage方法是一个例外，还有些浏览器比如ie6也可以使用top、parent等少数几个属性)，总之，你可以当做是只能获取到一个几乎无用的window对象。比如，有一个页面，它的地址是<a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a>  ， 在这个页面里面有一个iframe，它的src是<a href="http://example.com/b.html" target="_blank" rel="external">http://example.com/b.html</a>, 很显然，这个页面与它里面的iframe框架是不同域的，所以我们是无法通过在页面中书写js代码来获取iframe中的东西的这个时候，document.domain就可以派上用场了，我们只要把<a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a> 和 <a href="http://example.com/b.html这两个页面的document.domain都设成相同的域名就可以了。但要注意的是，document.domain的设置是有限制的，我们只能把document.domain设置成自身或更高一级的父域，且主域必须相同。例如：a.b.example.com" target="_blank" rel="external">http://example.com/b.html这两个页面的document.domain都设成相同的域名就可以了。但要注意的是，document.domain的设置是有限制的，我们只能把document.domain设置成自身或更高一级的父域，且主域必须相同。例如：a.b.example.com</a> 中某个文档的document.domain 可以设成a.b.example.com、b.example.com 、example.com中的任意一个，但是不可以设成 c.a.b.example.com,因为这是当前域的子域，也不可以设成baidu.com,因为主域已经不相同了。<br>不过如果你想在<a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a> 页面中通过ajax直接请求<a href="http://example.com/b.html" target="_blank" rel="external">http://example.com/b.html</a> 页面，即使你设置了相同的document.domain也还是不行的，所以修改document.domain的方法只适用于不同子域的框架间的交互。如果你想通过ajax的方法去与不同子域的页面交互，除了使用jsonp的方法外，还可以用一个隐藏的iframe来做一个代理。原理就是让这个iframe载入一个与你想要通过ajax获取数据的目标页面处在相同的域的页面，所以这个iframe中的页面是可以正常使用ajax去获取你要的数据的，然后就是通过我们刚刚讲得修改document.domain的方法，让我们能通过js完全控制这个iframe，这样我们就可以让iframe去发送ajax请求，然后收到的数据我们也可以获得了。<h2 id="三、使用window-name来进行跨域"><a href="#三、使用window-name来进行跨域" class="headerlink" title="三、使用window.name来进行跨域"></a>三、使用window.name来进行跨域</h2>window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的，并不会因新页面的载入而进行重置。注意，window.name的值只能是字符串的形式，这个字符串的大小最大能允许2M左右甚至更大的一个容量，具体取决于不同的浏览器，但一般是够用了。</li>
-</ul>
-<h2 id="四、使用HTML5中新引进的window-postMessage方法来跨域传送数据"><a href="#四、使用HTML5中新引进的window-postMessage方法来跨域传送数据" class="headerlink" title="四、使用HTML5中新引进的window.postMessage方法来跨域传送数据"></a>四、使用HTML5中新引进的window.postMessage方法来跨域传送数据</h2><p>window.postMessage(message,targetOrigin)  方法是html5新引进的特性，可以使用它来向其它的window对象发送消息，无论这个window对象是属于同源或不同源，目前IE8+、FireFox、Chrome、Opera等浏览器都已经支持window.postMessage方法。<br>调用postMessage方法的window对象是指要接收消息的那一个window对象，该方法的第一个参数message为要发送的消息，类型只能为字符串；第二个参数targetOrigin用来限定接收消息的那个window对象所在的域，如果不想限定域，可以使用通配符 *  。<br>需要接收消息的window对象，可是通过监听自身的message事件来获取传过来的消息，消息内容储存在该事件对象的data属性中。<br>上面所说的向其他window对象发送消息，其实就是指一个页面有几个框架的那种情况，因为每一个框架都有一个window对象。在讨论第二种方法的时候，我们说过，不同域的框架间是可以获取到对方的window对象的，而且也可以使用window.postMessage这个方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">// .js</div><div class="line">Page(&#123;</div><div class="line">  data: &#123;</div><div class="line">    objectArray: [</div><div class="line">      &#123;id: 5, unique: &apos;unique_5&apos;&#125;,</div><div class="line">      &#123;id: 4, unique: &apos;unique_4&apos;&#125;,</div><div class="line">      &#123;id: 3, unique: &apos;unique_3&apos;&#125;,</div><div class="line">      &#123;id: 2, unique: &apos;unique_2&apos;&#125;,</div><div class="line">      &#123;id: 1, unique: &apos;unique_1&apos;&#125;,</div><div class="line">      &#123;id: 0, unique: &apos;unique_0&apos;&#125;,</div><div class="line">    ],</div><div class="line">    numberArray: [1, 2, 3, 4]</div><div class="line">  &#125;,</div><div class="line">  switch: function(e) &#123;</div><div class="line">    const length = this.data.objectArray.length</div><div class="line">    for (let i = 0; i &lt; length; ++i) &#123;</div><div class="line">      const x = Math.floor(Math.random() * length)</div><div class="line">      const y = Math.floor(Math.random() * length)</div><div class="line">      const temp = this.data.objectArray[x]</div><div class="line">      this.data.objectArray[x] = this.data.objectArray[y]</div><div class="line">      this.data.objectArray[y] = temp</div><div class="line">    &#125;</div><div class="line">    this.setData(&#123;</div><div class="line">      objectArray: this.data.objectArray</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  addToFront: function(e) &#123;</div><div class="line">    const length = this.data.objectArray.length</div><div class="line">    this.data.objectArray = [&#123;id: length, unique: &apos;unique_&apos; + length&#125;].concat(this.data.objectArray)</div><div class="line">    this.setData(&#123;</div><div class="line">      objectArray: this.data.objectArray</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  addNumberToFront: function(e)&#123;</div><div class="line">    this.data.numberArray = [ this.data.numberArray.length + 1 ].concat(this.data.numberArray)</div><div class="line">    this.setData(&#123;</div><div class="line">      numberArray: this.data.numberArray</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>###3)import和include</p>
+<blockquote>
+<p>import可以在该文件中使用目标文件定义的template，如：</p>
+</blockquote>
+<p>在item.wxml中定义了一个叫item的template：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- item.wxml --&gt;</div><div class="line">&lt;template name=&quot;item&quot;&gt;</div><div class="line">  &lt;text&gt;&#123;&#123;text&#125;&#125;&lt;/text&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure></p>
+<p>在index.wxml中引用了item.wxml，就可以使用item模板：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;import src=&quot;item.wxml&quot;/&gt;</div><div class="line">&lt;template is=&quot;item&quot; data=&quot;&#123;&#123;text: &apos;forbar&apos;&#125;&#125;&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<p>import有作用域的概念，即只会import目标文件中定义的template，而不会import目标文件import的template。也就是只会找到直接父级，不会去父级的父级再导入。</p>
+<blockquote>
+<p>include可以将目标文件除了<template>的整个代码引入，相当于是拷贝到include位置，可以利用include来引入公共头部和页脚等信息如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- index.wxml --&gt;</div><div class="line">&lt;include src=&quot;header.wxml&quot;/&gt;</div><div class="line">&lt;view&gt; body &lt;/view&gt;</div><div class="line">&lt;include src=&quot;footer.wxml&quot;/&gt;</div></pre></td></tr></table></figure></template></p>
+</blockquote>
+<p>###4)关于wxss样式<br>和css并没啥大的区别，采用@import导入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@import &quot;common.wxss&quot;;</div><div class="line">.middle-p:&#123;</div><div class="line">  padding:15px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>定义在app.wxss中的样式为全局样式，作用于每一个页面。在page的wxss文件中定义的样式为局部样式，只作用在对应的页面，并会覆盖app.wxss中相同的选择器。</p>
+</blockquote>
+<p>###5)兼容处理</p>
+<blockquote>
+<p>对于新增的 API，可以用以下代码来判断是否支持用户的手机。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">if (wx.openBluetoothAdapter) &#123;</div><div class="line">  wx.openBluetoothAdapter()</div><div class="line">&#125; else &#123;</div><div class="line">  // 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示</div><div class="line">  wx.showModal(&#123;</div><div class="line">    title: &apos;提示&apos;,</div><div class="line">    content: &apos;当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。&apos;</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对于 API 的参数或者返回值有新增的参数，可以判断用以下代码判断。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">const SDKVersion = wx.getSystemInfoSync().SDKVersion || &apos;1.0.0&apos;</div><div class="line">const [MAJOR, MINOR, PATCH] = SDKVersion.split(&apos;.&apos;).map(Number)</div><div class="line"></div><div class="line">const canIUse = apiName =&gt; &#123;</div><div class="line">  if (apiName === &apos;showModal.cancel&apos;) &#123;</div><div class="line">    return MAJOR &gt;= 1 &amp;&amp; MINOR &gt;= 1</div><div class="line">  &#125;</div><div class="line">  return true</div><div class="line">&#125;</div><div class="line"></div><div class="line">wx.showModal(&#123;</div><div class="line">  success: function(res) &#123;</div><div class="line">    if (canIUse(&apos;showModal.cancel&apos;)) &#123;</div><div class="line">      console.log(res.cancel)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>对于组件，新增的属性在旧版本上不会被处理，不过也不会报错。如果特殊场景需要对旧版本做一些降级处理，可以这样子做。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// .js</div><div class="line">Page(&#123;</div><div class="line">  data: &#123;</div><div class="line">    canIUse: canIUse(&apos;button.open-type.contact&apos;)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!-- .wxml --&gt;</div><div class="line">&lt;button wx:if=&quot;&#123;&#123;canIUse&#125;&#125;&quot; open-type=&quot;contact&quot;&gt; 客服消息 &lt;/button&gt;</div><div class="line">&lt;contact-button wx:else&gt;&lt;/contact-button&gt;</div></pre></td></tr></table></figure>
+<p>// 下边都是些组件的介绍了，用到再看也来得及。目前感觉挺简单的。</p>
 
       
       
@@ -347,13 +353,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/14/跨域的常用四种方式/">跨域的常用四种方式</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/17/微信小程序初探/">微信小程序初探</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Carlos 的个人博客">Carlos</a></p>
-        <p><span>发布时间:</span>2017年04月14日 - 14时46分</p>
-        <p><span>最后更新:</span>2017年04月14日 - 14时51分</p>
+        <p><span>发布时间:</span>2017年04月17日 - 16时30分</p>
+        <p><span>最后更新:</span>2017年04月17日 - 16时32分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/14/跨域的常用四种方式/" title="跨域的常用四种方式">http://yoursite.com/2017/04/14/跨域的常用四种方式/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/14/跨域的常用四种方式/　　作者: Carlos" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/17/微信小程序初探/" title="微信小程序初探">http://yoursite.com/2017/04/17/微信小程序初探/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/17/微信小程序初探/　　作者: Carlos" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -366,20 +372,15 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/04/14/react-webpack创建项目极简demo/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/14/JavaScript面向对象编程/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          react+webpack创建项目极简demo
+          JavaScript面向对象编程
         
       </div>
     </a>
   
-  
-    <a href="/2017/04/14/JavaScript面向对象编程/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript面向对象编程</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -388,7 +389,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、通过jsonp跨域"><span class="toc-number">1.</span> <span class="toc-text">一、通过jsonp跨域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、通过修改document-domain来跨子域"><span class="toc-number">2.</span> <span class="toc-text">二、通过修改document.domain来跨子域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、使用window-name来进行跨域"><span class="toc-number">3.</span> <span class="toc-text">三、使用window.name来进行跨域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、使用HTML5中新引进的window-postMessage方法来跨域传送数据"><span class="toc-number">4.</span> <span class="toc-text">四、使用HTML5中新引进的window.postMessage方法来跨域传送数据</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、程序结构"><span class="toc-number">1.</span> <span class="toc-text">一、程序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、程序注册"><span class="toc-number">2.</span> <span class="toc-text">二、程序注册</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三、view"><span class="toc-number">2.1.</span> <span class="toc-text">三、view</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -439,15 +440,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/14/react-webpack创建项目极简demo/" title="上一篇: react+webpack创建项目极简demo">
+            <a href="/2017/04/14/JavaScript面向对象编程/" title="上一篇: JavaScript面向对象编程">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/14/JavaScript面向对象编程/" title="下一篇: JavaScript面向对象编程">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/17/微信小程序初探/">微信小程序初探</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/JavaScript面向对象编程/">JavaScript面向对象编程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/跨域的常用四种方式/">跨域的常用四种方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/react-webpack创建项目极简demo/">react+webpack创建项目极简demo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/利用WebViewJavascriptBridge实现JS和native之间的交互/">利用WebViewJavascriptBridge实现JS和native之间的交互</a></li></ul>
